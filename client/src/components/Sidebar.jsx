@@ -9,8 +9,10 @@ const Sidebar = () => {
 
 
             <nav className='flex flex-col gap-20'>
-                {links.map((i) => (
-                    <NavLink className={"flex gap-4 items-center text-lg text-gray-400"} to={i.path}>
+                {links.map((i, key) => (
+                    <NavLink
+                        key={key}
+                        className={"flex gap-4 items-center text-lg text-gray-400"} to={i.path}>
                         <span className='max-md:text-2xl'>{i.icon}</span>
                         <span className='max-md:hidden'>{i.title}</span>
                     </NavLink>
